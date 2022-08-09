@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<!-- 폰트어썸 CDN주소 가져오기 -->
+<script src="https://kit.fontawesome.com/ca40b4f408.js" crossorigin="anonymous"></script>
+
 <meta charset="UTF-8">
 <title>법무법인 로백스</title>
 
 <style type="text/css">
 
-@font-face {
-	font-family: font1;
+@font-face { 
+	font-family: fontL; 
 	src: url('fonts/AppleSDGothicNeoL.ttf') format('truetype');
 } 
 
+@font-face {
+	font-family: fontB;
+	src: url('fonts/AppleSDGothicNeoB.ttf') format('truetype');
+} 
+
 body {
-	font-family: font1;
-	font-size: 16px;
+	font-family: fontL;
 }
 
 .header {
@@ -74,11 +82,49 @@ a:hover {
 	border-width: 1px;
 }
 
+.sub_content {
+	padding: 100px 0 200px 0; 
+}
+
+.sub_content .inner {
+	width: 1190px;
+	margin: 0 auto;
+	padding: 0 30px;
+}	
+
+.sub_content .mapfont {
+	font-family: fontB;
+	font-size: 42px;
+	font-weight: 900;
+	line-height: 1;	
+}
+
+.sub_content .mapfont2 {
+	font-size: 16px;
+	color: #abafb7;
+	font-weight: bold;
+	margin-top: 15px;
+}
+
+.mapfont2::before {
+	/* 가상요소에는 content라고 하는 스타일이 들어간다. */
+	/* content: "\e3af"; */	/* 아이콘 유니코드 복사해서 붙여넣기 */
+	font-family: "Font Awesome 5 Pro";		/* 어썸코드 규칙. 폰트 대소문자 및 띄어쓰기 구분 */
+	font-weight: 900;	/* 아이콘이 solid형식 이므로 font-weight는 무조건 900이 들어가야함 */
+}
+
+.mapfont2 i {
+	color: #004ddf;
+}
+
+
+
 </style>
 </head>
 <body>
 
 <div class="wrap">
+	<!-- 헤더 시작 -->
 	<div class="header">
 		<a href="/" class="logo">
 			<img src="http://lawvax.co.kr/image/site/logo.png" width="225" height="69" >
@@ -98,8 +144,25 @@ a:hover {
 		</select>
 			
 	</div>
+<!-- 헤더 끝 -->
 
-	<div id="content"></div>
+	<!-- content 시작 -->
+	<div id="content">
+		<div class="sub_content">
+			<div class="inner">
+				<div class="mapfont">오시는 길</div>
+				<div class="mapfont2">
+					<i class="fa-solid fa-house-chimney"></i>
+					<!-- Font Awesome 아이콘 카피코드  -->
+					> 오시는 길
+				</div>
+			
+			</div>
+			
+		
+		</div>
+	
+	</div>
 	<div id="footer"></div>
 	
 </div>
