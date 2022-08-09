@@ -87,6 +87,7 @@ a:hover {
 }
 
 .sub_content .inner {
+	position: relative;
 	width: 1190px;
 	margin: 0 auto;
 	padding: 0 30px;
@@ -117,7 +118,26 @@ a:hover {
 	color: #004ddf;
 }
 
+.inner .sub_logo {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
 
+.map {
+	position: relative;
+	margin-top: 100px;
+}
+
+.map #daumRoughmapContainer1660048458481{
+	width: 100%;
+	height: 550px;
+	box-shadow: 15px 15px 28px rgb(0 0 0 / 25%);
+}
+
+.map .root_daum_roughmap {
+	height: 100%;
+}
 
 </style>
 </head>
@@ -156,7 +176,26 @@ a:hover {
 					<!-- Font Awesome 아이콘 카피코드  -->
 					> 오시는 길
 				</div>
-			
+				<img src="http://lawvax.co.kr/image/site/logo2.png" class="sub_logo" width="97">
+				<div class="map">
+					<!-- * 카카오맵 - 지도퍼가기 -->
+					<!-- 1. 지도 노드 -->
+					<div id="daumRoughmapContainer1660048458481" class="root_daum_roughmap root_daum_roughmap_landing"></div>		
+					<!--
+						2. 설치 스크립트
+						* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+					-->					
+					<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+					<!-- 3. 실행 스크립트 -->
+					<script charset="UTF-8">
+					new daum.roughmap.Lander({
+					"timestamp" : "1660048458481",
+					"key" : "2bbn9",
+					}).render();
+					</script>
+								
+				</div>
+				
 			</div>
 			
 		
