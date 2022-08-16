@@ -6,6 +6,40 @@
 
 <style>
 
+div.hd > a > img {
+	padding: 20px;
+	margin-right: 20px;
+}
+
+div.hd2 {
+	padding: 30px;
+	font-weight: bold;
+}
+
+li.hdl{
+	list-style-type: none;
+	float: left;
+	padding-left: 3%;
+	padding-right: 3%;
+}
+
+li.hdl > a {
+	text-decoration: none;
+	font-size: 20px;
+}
+
+li.hdl > a:hover {
+	color: blue;
+}
+
+#lang {
+	float: right;
+	padding: 5px;
+	width: 70px;
+}
+
+/* ---------------------------------------------------- */
+
 div.md {
 	display: inline-block;
     padding-top: 100px;
@@ -39,7 +73,7 @@ div.ml2 {
 	margin-bottom: 100px;
 }
 
-li {
+li.mdl {
 	display: inline-block;
 	border: 1px solid black;
 	width: 47%;
@@ -47,18 +81,18 @@ li {
 	font-size: 17px;
 }
 
-li:hover {
+li.mdl:hover {
 	background: linear-gradient(90deg, #17c2f6, blue);
 }
 
-a {
+a.mda {
 	text-decoration: none;
 	color: black;
 	display: block; 
 	padding: 4%;
 }
 
-a:hover {
+a.mda:hover {
 	color: white;
 }
 
@@ -69,12 +103,18 @@ p.p2 {
 	font-weight: bold;
 }
 
+/* ---------------------------------------------------- */
+
 div.ft {
 	padding-top: 45px;
 	padding-bottom: 45px;
 	padding-right: 10%;
     padding-left: 10%;
     border-top: 1px solid #E6E6E6;
+}
+
+#fta {
+	padding-left: 0;
 }
 
 p.p3, p.p4 {
@@ -94,7 +134,37 @@ p.p4 {
 <body>
 
 <div class="hd">
-	<h1>메뉴</h1>
+	<a href="http://lawvax.co.kr/main/index.php">
+		<img src="logo.png" style="float:left;">	
+	</a>
+	
+	<div class="hd2">
+		<ul>
+			<li class="hdl">
+				<a href="#">LawVax</a>
+			</li>
+	
+			<li class="hdl">
+				<a href="#">주요 업무분야</a>
+			</li>
+			
+			<li class="hdl">
+				<a href="#">구성원</a>
+			</li>
+		
+			<li class="hdl">
+				<a href="#">소식·자료</a>
+			</li>
+			<li class="hdl">
+				<a href="#">오시는 길</a>
+			</li>
+		</ul>
+		
+		<select id="lang">
+			<option value="">KOR</option>
+		    <option value="">ENG</option>
+		</select>
+	</div>
 </div>
 
 <div class="md">
@@ -116,15 +186,15 @@ p.p4 {
 		<h2>기업 분야</h2>
 		<ul>
 			
-			<li><a href="">회계 관련 법률 리스크 <p class="p2"> > </p></a></li>
+			<li class="mdl"><a class="mda" href="">회계 관련 법률 리스크 <p class="p2"> > </p></a></li>
 			
-			<li><a href="">중대재해 관련 법률 리스크 <p class="p2"> > </p></a></li>
+			<li class="mdl"><a class="mda" href="">중대재해 관련 법률 리스크 <p class="p2"> > </p></a></li>
 			
-			<li><a href="">경영권 승계나 M&A 관련 법률 리스크 <p class="p2"> > </p> </a></li>
+			<li class="mdl"><a class="mda" href="">경영권 승계나 M&A 관련 법률 리스크 <p class="p2"> > </p> </a></li>
 			
-			<li><a href="">부동산 / 건설 관련 법률 리스크 <p class="p2"> > </p></a></li>
+			<li class="mdl"><a class="mda" href="">부동산 / 건설 관련 법률 리스크 <p class="p2"> > </p></a></li>
 			
-			<li><a href="">공정거래 관련 법률 리스크 <p class="p2"> > </p></a></li>
+			<li class="mdl"><a class="mda" href="">공정거래 관련 법률 리스크 <p class="p2"> > </p></a></li>
 			
 		</ul>
 	</div>
@@ -133,9 +203,9 @@ p.p4 {
 	
 		<h2>금융 분야</h2>
 		<ul>
-			<li><a href="">증권 / 금융 분야 <p class="p2"> > </p></a></li>
+			<li class="mdl"><a class="mda" href="">증권 / 금융 분야 <p class="p2"> > </p></a></li>
 			
-			<li><a href="">가상자산(Virtual asset) <p class="p2"> > </p></a></li>
+			<li class="mdl"><a class="mda" href="">가상자산(Virtual asset) <p class="p2"> > </p></a></li>
 			
 		</ul>
 	</div>
@@ -143,7 +213,10 @@ p.p4 {
 </div>
 
 <div class="ft">
-	<img src="logo.png" style="height: 48px;">
+	<a href="http://lawvax.co.kr/main/index.php">
+		<img src="logo.png" style="height: 48px;">	
+	</a>
+	
 	<p class="p3">
 		서울특별시 서초구 사임당로 18 석오빌딩 3층 법무법인 로백스 | 공동대표 김기동, 이동열
 		<br>
