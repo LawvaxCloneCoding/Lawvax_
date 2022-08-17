@@ -2,8 +2,28 @@
 <html>
 <head>
 
-<!-- 폰트어썸 CDN주소 가져오기 -->
+<!-- 폰트어썸 CDN주소 가져오기. -->
 <script src="https://kit.fontawesome.com/ca40b4f408.js" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+
+function doDisplay() {
+	var showView = document.getElementById("div4inner");
+	if(showView.style.display=='none') {
+		showView.style.display='block';
+	} else {
+		showView.style.display='none';
+	}
+}
+
+</script>
+
+
+<!-- wow-data-duration 사용하기 -->
+<link rel="stylesheet" href="resources/animate.css">
+<script type="text/javascript" src="resources/wow.min.js"></script>
+<script> new WOW().init(); </script>
 
 <meta charset="UTF-8">
 <title>법무법인 로백스</title>
@@ -86,11 +106,10 @@ a:hover {
 	padding: 100px 0 200px 0; 
 }
 
-.sub_content .inner {
+.inner {
 	position: relative;
 	width: 1190px;
 	margin: 0 auto;
-	padding: 0 30px;
 }	
 
 .sub_content .mapfont {
@@ -135,9 +154,126 @@ a:hover {
 	box-shadow: 15px 15px 28px rgb(0 0 0 / 25%);
 }
 
-.map .root_daum_roughmap {
+.map .root_daum_roughmap .wrap_map {
 	height: 100%;
 }
+
+.inner .info {
+	margin-top: 30px;
+	padding: 35px;
+	border-bottom: 1px solid #ebebeb;
+}
+
+.inner .info2 {
+	padding: 35px;
+	border-bottom: 1px solid #ebebeb;
+}
+
+.inner .info3 {
+	padding: 35px;
+}
+
+.info_inner div {
+	display: inline-block;
+} 
+
+.div1 {
+	width: 150px;
+	font-size: 16px;
+	color: #1c81e7;
+	font-weight: bold;
+}
+
+.div2 {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.div3 {
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+
+.div33 {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.div4 {
+	display: none;
+	padding-left: 45px;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 1;
+}
+
+.div4 img {
+	display: block;
+	padding: 10px 0 10px 3px;
+}
+
+.icon {
+	margin-right: 10px;
+}
+
+.div3 span {
+	display: inline-block;
+	width: 3px;
+	height: 11px;
+	background: #aeb8c1;
+	margin: 0 10px;
+}
+
+.div33 a {
+	display: inline-block;
+	width: 104px;
+	height: 33px;
+	line-height: 33px;
+	margin-left: 10px;
+	background-color: #0037fa;
+	border-radius: 50px; /* 모서리 둥글게 */
+	font-size: 14px;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+}
+
+#footer {
+	padding: 0 30px;
+	border-top: 1px solid #e2e2e2;
+}
+
+.footer_inner {
+	max-width: 1190px;
+	margin: 0 auto;
+	padding: 45px 0;
+}
+
+.footer_inner a {
+	display: block;
+	width: 160px;
+	margin-bottom: 15px;
+}
+
+.footer_inner a img {
+	/* Rendered size */
+	width: 160px;
+	height: 49px;
+}
+
+.footer_inner .ptext1 {
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 1.8;
+	margin-bottom: 5px;
+}
+
+.footer_inner .ptext {
+	font-size: 13px;
+	color: #84878a
+}
+
 
 </style>
 </head>
@@ -170,13 +306,15 @@ a:hover {
 	<div id="content">
 		<div class="sub_content">
 			<div class="inner">
-				<div class="mapfont">오시는 길</div>
-				<div class="mapfont2">
+				<div class="mapfont" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeInUp;">오시는 길</div>
+				<div class="mapfont2" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeIn">
 					<i class="fa-solid fa-house-chimney"></i>
 					<!-- Font Awesome 아이콘 카피코드  -->
 					> 오시는 길
 				</div>
-				<img src="http://lawvax.co.kr/image/site/logo2.png" class="sub_logo" width="97">
+				<img src="http://lawvax.co.kr/image/site/logo2.png" class="sub_logo" width="97" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeIn">
+				
+				<!-- MAP 시작 -->
 				<div class="map">
 					<!-- * 카카오맵 - 지도퍼가기 -->
 					<!-- 1. 지도 노드 -->
@@ -193,19 +331,83 @@ a:hover {
 					"key" : "2bbn9",
 					}).render();
 					</script>
-								
 				</div>
+				<!-- MAP 끝 -->
 				
+				<!-- INFO -->
+				<div class="info">
+					<div class="info_inner" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeIn">
+						<div class="div1">Address</div>
+						<div class="div2">서울특별시 서초구 사임당로 18 석오빌딩 3층 법무법인 로백스</div>
+					</div>
+				</div>
+				<div class="info2">
+					<div class="info_inner" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeIn">
+						<div class="div1">Tel / Fax</div>
+						<div class="div2">02)583-6300 / 02)583-6303</div>
+					</div>
+				</div>
+				<div class="info2">
+					<div class="info_inner" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeIn">
+						<div class="div1">Email</div>
+						<div class="div2">lawvax@lawvax.co.kr</div>
+					</div>
+				</div>
+				<div class="info3">
+					<div class="info_inner" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeIn">
+						<div class="div1">대중교통</div>
+						<div class="div3">
+							<img src="http://lawvax.co.kr/images/bus_icon1.png" class="icon">
+							350,742
+							<span></span>
+							서울교대사거리 정류장 22160
+						</div><br>
+						<div class="div1"></div>
+						<div class="div3">
+							<img src="http://lawvax.co.kr/images/bus_icon2.png" class="icon">
+							서초21
+							<span></span>
+							청호나이스 정류장 22935
+						</div><br>
+						<div class="div1"></div>
+						<div class="div33">
+							<img src="http://lawvax.co.kr/images/subway_icon.png" class="icon">
+							남부터미널 6번 출구 하차
+							<a href="javascript:doDisplay();">경로 상세보기</a>
+						</div><br>
+						<div class="div1"></div>
+						<div class="div4">
+							<div id="div4inner" style="display: none;">
+							<img src="http://lawvax.co.kr/image/site/map_arw.png">
+							서초3동 사거리 방면 165m 이동
+							<br>
+							<img src="http://lawvax.co.kr/image/site/map_arw.png">
+							한일현대시멘트 본사에서 오른쪽 방향 357m 이동
+							<br>
+							<img src="http://lawvax.co.kr/image/site/map_arw.png">
+							포마토 교대점에서 왼쪽 58미터 이동<br>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- INFO 끝 -->
 			</div>
-			
-		
+			<!-- INNER영역 끝 -->
 		</div>
-	
 	</div>
-	<div id="footer"></div>
+	<!-- content 끝 -->
 	
+	<!-- footer 시작 -->
+	<div id="footer">
+		<div class="footer_inner">
+			<a href="#"><img src="http://lawvax.co.kr/image/site/logo.png"></a>
+			<p class="ptext1">"서울특별시 서초구 사임당로 18 석오빌딩 3층 법무법인 로백스 | 공동대표 김기동, 이동열"<br>
+			대표전화 : 02)583-6300 | 팩스 : 02)583-6303 | 이메일 : lawvax@lawvax.co.kr</p>
+			<p class="ptext2">Copyright© LawVax. All rights reserved.</p>
+		</div>
+	</div>
+	<!-- footer 끝 -->
 </div>
-
 
 </body>
 </html>
