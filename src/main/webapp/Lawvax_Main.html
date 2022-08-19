@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>법무법인 로백스</title>
+  <style>
+    @keyframes fadeInup {
+      from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    body {
+      margin: 0px;
+      padding: 0px;
+      height: 100%;
+
+    }
+
+    a {
+      text-decoration-line: none;
+      color: black;
+    }
+
+    select {
+      font-weight: bold;
+      height: 25px;
+      width: 65px;
+      position: absolute;
+      left: 500px;
+      top: 44px;
+      align-items: center;
+    }
+
+    div>select {
+      position: relative;
+      left: 90px;
+      justify-content: flex-end;
+    }
+
+    #wrap {
+      position: relative;
+      height: 1px;
+
+    }
+
+    #hyper:hover {
+      color: blue;
+    }
+
+    .logo img {
+      height: 70px;
+      margin-bottom: 15px;
+    }
+
+    .top {
+      width: auto;
+      margin: auto;
+      float: left;
+      font-weight: 550;
+      font-size: 20px;
+      margin: 26px;
+    }
+
+    .tposition {
+      position: relative;
+      top: 10px;
+      padding: 5px;
+    }
+
+    .menu_wrap {
+      position: relative;
+      padding: 50px;
+    }
+
+    #section1 {
+      padding-top: 129px;
+      height: 770px;
+    }
+
+    .sec1 {
+      position: relative;
+      text-align: center;
+
+    }
+
+    #sec1_logo {
+      z-index: 3;
+      animation-name: fadeInup;
+      animation-duration: 2s;
+    }
+
+    #sec1_text {
+      font-size: 35px;
+      font-weight: lighter;
+      bottom: 35px;
+      z-index: 2;
+      animation-name: fadeIn;
+      animation-duration: 2s;
+    }
+
+    #sec1_back {
+      position: relative;
+      bottom: 260px;
+      z-index: -1;
+
+    }
+
+    #section2 {
+      padding-top: 160px;
+      padding-bottom: 150px;
+      position: relative;
+      left: 50px;
+    }
+
+    #list1 {
+      position: relative;
+      width: 550px;
+      height: 500px;
+      margin-left: -35px;
+      background-image: url("http://lawvax.co.kr/image/site/main_img3.png");
+    }
+
+    #list2 {
+      position: relative;
+      width: 550px;
+      height: 500px;
+      margin-left: 35px;
+      background-image: url("http://lawvax.co.kr/image/site/main_img4.png ");
+    }
+
+    .title {
+      animation-name: fadeInup;
+      animation-duration: 5s;
+      position: relative;
+    }
+
+    #sec2_title {
+      left: 10px;
+    }
+
+    .sec2_position {
+      justify-content: space-around;
+      position: relative;
+      bottom: 30px;
+    }
+
+    .p1 {
+      font-size: 42px;
+      position: relative;
+      left: 40px;
+      top: 20px;
+    }
+
+    .p2 {
+      font-size: 19px;
+      position: relative;
+      left: 40px;
+      top: 97px;
+    }
+
+    .p3 {
+      position: absolute;
+      left: 470px;
+      font-size: 37px;
+      font-weight: lighter;
+    }
+
+    li {
+      list-style: none;
+      animation-name: fadeIn;
+      animation-duration: 4s;
+    }
+
+    li:hover {
+      transform: translateY(-30px);
+      transition: 0.4s;
+      box-shadow: 10px 10px 30px grey;
+    }
+
+    li:hover .p3 {
+      transform: rotate(90deg);
+      transition: 0.5s;
+    }
+
+    .lia {
+      color: white;
+      line-height: 1.7;
+      font-weight: bolder;
+      position: absolute;
+    }
+
+    #sec3_title {
+      left: 60px;
+    }
+
+    .box1 {
+      border: 1px solid black;
+      border-radius: 30px;
+      text-align: center;
+      width: 100px;
+      height: 40px;
+      font-size: 13px;
+      float: right;
+      position: relative;
+      bottom: 130px;
+      right: 180px;
+
+    }
+
+    .box1:hover {
+      background: black;
+    }
+
+    .box1:hover #boxc {
+      color: white;
+    }
+
+
+    #slick_slider {
+      border: 1px solid black;
+      background: yellow;
+      width: 90%;
+      height: 230px;
+      bottom: 22px;
+      z-index: 1;
+      position: relative;
+      margin: auto;
+    }
+
+    #section3 {
+      position: relative;
+
+      padding: 170px;
+    }
+
+    #bottom_background {
+      width: 100%;
+      height: 340px;
+      border: solid none;
+      background: linear-gradient(to right, #e3ecf6 40%, #fff 60%);
+      z-index: -1;
+      position: relative;
+      bottom: 140px;
+
+    }
+
+    #section4 {
+      height: 500px;
+      position: relative;
+      bottom: 140px;
+      background: linear-gradient(to right, #e3ecf6 40%, #fff 60%);
+      padding: 0px;
+    }
+
+    .contact {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      text-decoration: underline;
+
+    }
+
+    #contact1:hover #cona1 {
+      color: blue;
+    }
+
+    #contact2:hover #cona2 {
+      color: blue;
+    }
+
+    #contact1 {
+      font-size: 37px;
+      font-weight: bolder;
+      width: 50;
+    }
+
+    #contact2 {
+      font-size: 37px;
+      font-weight: 999;
+      width: 50;
+    }
+
+    #footer {
+      padding: 30px;
+      line-height: 0px;
+      font-size: 12px;
+      position: relative;
+      bottom: 127px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <!-- header 시작-->
+    <div id="header">
+      <div class="top logo" id="logo">
+        <a href="Lawvax_Main.html">
+          <img src="http://lawvax.co.kr/image/site/logo.png"></a>
+      </div>
+      <div class="tposition" id="menu_wrap">
+        <div class="tposition top"><a href="Lawvax_Main.html" id="hyper">LawVax</a></div>
+        <div class="tposition top"><a href="Lawvax_Main.html" id="hyper">주요 업무분야</a></div>
+        <div class="tposition top"><a href="Lawvax_Main.html" id="hyper">구성원</a></div>
+        <div class="tposition top"><a href="Lawvax_Main.html" id="hyper">소식·자료</a></div>
+        <div class="tposition top"><a href="Lawvax_Main.html" id="hyper">오시는길</a></div>
+      </div>
+
+      <select class="selectbox" style="font-size: 13px;">
+        <option value="">KOR</option>
+        <option value="">ENG</option>
+      </select>
+
+    </div>
+    <!-- header 끝-->
+    <!-- section1 시작 -->
+    <div id="section1">
+      <div class="sec1" id="sec1_logo">
+        <img src=http://lawvax.co.kr/image/site/main_img1.png>
+      </div>
+      <div class="sec1" id="sec1_text">
+        <p>법률리스크 예방 및 대응에 특화된 기업·금융 분야 전문 로펌</p>
+      </div>
+      <div class="sec1" id="sec1_back">
+        <img src=http://lawvax.co.kr/image/site/main_img2.png>
+      </div>
+    </div>
+    <!-- section1 끝 -->
+    
+    <!-- section2 시작 -->
+    <div id="section2">
+      <div class=title id="sec2_title">
+        <p id="p1" style="color: darkgrey; font-weight: bolder; font-size: 20px; margin:0px;">LawVax</p>
+        <p id="p2" style="font-weight: 900; font-size: 70px; margin-top: -20px;">WORKS</p>
+      </div>
+      <div class="sec2_position">
+        <ul class="sec2_body" style="display:flex; text-shadow : 0px 1px 30px grey;">
+          <li class="lifont" id="list1">
+            <a href="#" class="lia">
+              <p class="p1 pa">기업</p>
+              <p class="p2 pa">회계 관련 법률 리스크<br>경영권 승계나 M&A 관련 법률 리스크<br>
+                공정거래 관련 법률 리스크<br>중대재해 관련 법률 리스크<br>
+                부동산/건설 관련 법률 리스크</p>
+              <p class="p3 pa">+</p>
+            </a>
+          </li>
+          <li class="lifont" id="list2">
+            <a href="#" class="lia">
+              <p class="p1 pa">금융</p>
+              <p class="p2 pa"><br><br><br>증권/금융 분야<br>가상자산(Virtual Asset)분야</p>
+              <p class="p3 pa">+</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- section2 끝 -->
+    <!-- section3 시작 -->
+    <div class="section3">
+      <div class="title" id="sec3_title">
+        <p id="sec3_p1" style="color: darkgrey; font-weight: bold; font-size: 20px; margin:0px;">LawVax</p>
+        <p id="sec3_p2" style="font-weight: 900; font-size: 70px; margin-top: -20px;">NEWS & MEDIA</p>
+        <div class="box1 box2"><a href="#">
+            <p id=boxc>모두 보기<p>
+          </a></div>
+      </div>
+      <div id="slick_slider">
+        slick slider ...●▅▇█▇▆▅▄▇...
+      </div>
+      <div id="bottom_background"></div>
+    </div>
+    <!-- section3 끝 -->
+    <!-- section4 시작 -->
+    <div id="section4">
+      <div class="title" id="sec4_title" style="left: 60px;">
+        <p id="p1" style="color: darkgrey; font-weight: bolder; font-size: 20px; margin:0px;">LawVax</p>
+        <p id="p2" style="font-weight: 900; font-size: 70px;margin-top: -30px;">contact</p>
+      </div>
+      <div class="contact">
+        <div class="contact" id="contact1"><a id="cona1" href="#">LawVax 구성원 소개
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></div>
+        <div class="contact" id="contact2"><a id="cona2" href="#">LawVax 오시는길
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></div>
+      </div>
+    </div>
+    <div id="footer">
+      <div>
+        <a href=""><img src="http://lawvax.co.kr/image/site/logo.png" style="height: 50px; padding-bottom:10px ;">
+          <p style="font-weight:600; ">서울특별시 서초구 사임당로 18 석오빌딩 3층 법무법인 로백스|공동대표 김기동, 이동열</p><br>
+          <p style="font-weight:600;">대표전화 : 02)583-6300 | 팩스 : 02)583-6303 | 이메일 : lawvax@lawvax.co.kr</p><br>
+          <p style="color: grey;">Copyrightⓒ Lawvax. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
