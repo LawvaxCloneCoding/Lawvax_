@@ -2,12 +2,34 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>법무법인 로백스</title> 
-<!-- merge test3 --> 
+<title>법무법인 로백스</title>
+<!-- test2 -->
 <script src="https://kit.fontawesome.com/debdd114de.js" crossorigin="anonymous"></script>
 
 
 <style>
+
+@keyframes fadeInup {
+	from {
+		opacity: 0;
+	transform: translate3d(0, 100%, 0);
+     }
+
+  	to {
+		opacity: 1;
+	transform: none;
+     }
+}
+
+@keyframes fadein {
+	from { 
+		opacity: 0;
+	}
+		
+	to { 
+		opacity: 1;
+	}
+}
 
 div.hd > a > img {
 	padding: 20px;
@@ -51,11 +73,14 @@ div.md {
     padding-right: 5%;
     padding-left: 5%;
     
+    
 }
 
 h1, h2 {
 	padding-left: 45px;
 	font-size: 25px;
+	animation-name: fadeInup;
+	animation-duration: 2.5s;
 }
 
 h1 {
@@ -105,11 +130,33 @@ a.mda:hover {
 	color: white;
 }
 
-p.p2 {
-	font-size: 17px; 
-	margin: 0; 
+div.chevronlogo {
 	float: right;
-	font-weight: bold;
+}
+
+#mdl1 {
+	animation-name: fadein;
+	animation-duration:	0.5s;
+}
+
+#mdl2 {
+	animation-name: fadein;
+	animation-duration:	2s;
+}
+
+#mdl3 {
+	animation-name: fadein;
+	animation-duration:	3.5s;
+}
+
+#mdl4 {
+	animation-name: fadein;
+	animation-duration:	5s;
+}
+
+#mdl5 {
+	animation-name: fadein;
+	animation-duration:	6.5s;
 }
 
 /* ---------------------------------------------------- */
@@ -126,15 +173,75 @@ div.ft {
 	padding-left: 0;
 }
 
-p.p3, p.p4 {
+p.p2, p.p3 {
 	font-size: 11px;
 	font-weight: bold;
 	margin-bottom: 5px;
 }
 
-p.p4 {
+p.p3 {
 	color: #979894;
 	margin-top: 5px;
+}
+
+/* ---------------------------------------------------- */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 900;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  position: fixed;
+  width: 60%;
+  padding: 10px;
+  max-width: 500px;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, .9);
+  /* "delay" the visibility transition */
+  -webkit-transition: opacity .5s, visibility 0s linear .5s;
+  transition: opacity .5s, visibility 0s linear .5s;
+  z-index: 1;
+}
+
+.popup:target {
+  visibility: visible;
+  opacity: 1;
+  /* cancel visibility transition delay */
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.popup .close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  padding: 5px;
+  color: #000;
+  transition: color .3s;
+  font-size: 2em;
+  line-height: .6em;
+  font-weight: bold;
+}
+
+.popup .close:hover {
+  color: #00E5EE;
 }
 
 </style>
@@ -197,33 +304,38 @@ p.p4 {
 		<h2>기업 분야</h2>
 		<ul>
 			
-			<li class="mdl">
-				<a class="mda" href='popup.php' onclick="window.open(this.href,'팝업창','width=800, height=800'); return false;">
-					회계 관련 법률 리스크 <p class="p2"> > </p>
+			<li class="mdl" id="mdl1">
+				<a class="mda" href="#pop1">
+					회계 관련 법률 리스크 
+					<div class="chevronlogo"><i class="fas fa-chevron-right"></i></div>
 				</a>
 			</li>
 			
-			<li class="mdl">
+			<li class="mdl" id="mdl2" >
 				<a class="mda" href='popup.php' onclick="window.open(this.href,'팝업창','width=800, height=800'); return false;">
-					중대재해 관련 법률 리스크 <p class="p2"> > </p>
+					중대재해 관련 법률 리스크
+					<div class="chevronlogo"><i class="fas fa-chevron-right"></i></div>
 				</a>
 			</li>
 			
-			<li class="mdl">
+			<li class="mdl" id="mdl3" >
 				<a class="mda" href='popup.php' onclick="window.open(this.href,'팝업창','width=800, height=800'); return false;">
-					경영권 승계나 M&A 관련 법률 리스크 <p class="p2"> > </p> 
+					경영권 승계나 M&A 관련 법률 리스크
+					<div class="chevronlogo"><i class="fas fa-chevron-right"></i></div>
 				</a>
 			</li>
 			
-			<li class="mdl">
+			<li class="mdl" id="mdl4" >
 				<a class="mda" href='popup.php' onclick="window.open(this.href,'팝업창','width=800, height=800'); return false;">
-					부동산 / 건설 관련 법률 리스크 <p class="p2"> > </p>
+					부동산 / 건설 관련 법률 리스크
+					<div class="chevronlogo"><i class="fas fa-chevron-right"></i></div>
 				</a>
 			</li>
 			
-			<li class="mdl">
+			<li class="mdl" id="mdl5" >
 				<a class="mda" href='popup.php' onclick="window.open(this.href,'팝업창','width=800, height=800'); return false;">
-					공정거래 관련 법률 리스크 <p class="p2"> > </p>
+					공정거래 관련 법률 리스크
+					<div class="chevronlogo"><i class="fas fa-chevron-right"></i></div>
 				</a>
 			</li>
 			
@@ -234,15 +346,17 @@ p.p4 {
 	
 		<h2>금융 분야</h2>
 		<ul>
-			<li class="mdl">
-				<a class="mda" href='popup.php' onclick="window.open(this.href,'팝업창','width=800, height=800'); return false;">
-					증권 / 금융 분야 <p class="p2"> > </p>
+			<li class="mdl" id="mdl1" >
+				<a class="mda"  href='popup.php' onclick="window.open(this.href,'팝업창','width=800, height=800'); return false;">
+					증권 / 금융 분야
+					<div class="chevronlogo"><i class="fas fa-chevron-right"></i></div>
 				</a>
 			</li>
 			
-			<li class="mdl">
-				<a class="mda" href='popup.php' onclick="window.open(this.href,'팝업창','width=800, height=800'); return false;">
-					가상자산(Virtual asset) <p class="p2"> > </p>
+			<li class="mdl" id="mdl2" >
+				<a class="mda"  href='popup.php' onclick="window.open(this.href,'팝업창','width=800, height=800'); return false;">
+					가상자산(Virtual asset)
+					<div class="chevronlogo"><i class="fas fa-chevron-right"></i></div>
 				</a>
 			</li>
 			
@@ -256,15 +370,23 @@ p.p4 {
 		<img src="http://lawvax.co.kr/image/site/logo.png" style="height: 48px;">	
 	</a>
 	
-	<p class="p3">
+	<p class="p2">
 		서울특별시 서초구 사임당로 18 석오빌딩 3층 법무법인 로백스 | 공동대표 김기동, 이동열
 		<br>
 		대표전화 : 02)583-6300 | 팩스 : 02)583-6303 | 이메일 : lawvax@lawvax.co.kr
 	</p>
 	
-	<p class="p4">
+	<p class="p3">
 		Copyright© LawVax. All rights reserved.
 	</p>
+	
+</div>
+
+<div id="pop1" class="overlay">
+  <div class="popup">
+    <a href="#none" class="close">&times;</a>
+    열려라 팝업!
+  </div>
 </div>
 
 </body>
