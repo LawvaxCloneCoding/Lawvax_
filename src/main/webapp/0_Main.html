@@ -4,7 +4,50 @@
 <head>
   <meta charset="UTF-8">
   <title>법무법인 로백스</title>
+  	  <!-- 제이쿼리 불러오기 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+ 
+<!-- Slick 불러오기 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+  <script>
+    $(function(){
+      $('.slick_slider').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      arrows : true,
+         
+      });
+    })
+  </script>
+
   <style>
+    @font-face{
+    font-family:'AppleSDGothicNeo';
+    src:url('/fonts/AppleSDGothicNeoUL.eot');
+    src:url('/fonts/AppleSDGothicNeoUL.woff') format('woff'),
+        url('/fonts/AppleSDGothicNeoUL.otf') format('opentype');
+    font-weight: 200;
+    font-style:normal;
+}
+
+html,body{
+    width:100%;height:100%;
+    /* font-family: 'Noto Sans KR', sans-serif; */
+    font-family: AppleSDGothicNeo, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    -moz-font-feature-settings:"liga", "kern";
+    letter-spacing:-0.04em;
+    font-weight:400;
+    color:#212326
+}
+
+
     @keyframes fadeInup {
       from {
         opacity: 0;
@@ -162,21 +205,21 @@
       bottom: 30px;
     }
 
-    .p1 {
+    .p_1 {
       font-size: 42px;
       position: relative;
       left: 40px;
       top: 20px;
     }
 
-    .p2 {
+    .p_2 {
       font-size: 19px;
       position: relative;
       left: 40px;
       top: 97px;
     }
 
-    .p3 {
+    .p_3 {
       position: absolute;
       left: 470px;
       font-size: 37px;
@@ -195,7 +238,7 @@
       box-shadow: 10px 10px 30px grey;
     }
 
-    li:hover .p3 {
+    li:hover .p_3 {
       transform: rotate(90deg);
       transition: 0.5s;
     }
@@ -222,7 +265,6 @@
       position: relative;
       bottom: 130px;
       right: 180px;
-
     }
 
     .box1:hover {
@@ -233,22 +275,85 @@
       color: white;
     }
 
-
-    #slick_slider {
-      border: 1px solid black;
-      background: yellow;
-      width: 90%;
+    .slick_slider {
+      width: 1300px;
       height: 230px;
-      bottom: 22px;
-      z-index: 1;
+      bottom: 55px;
+      z-index: 10;
       position: relative;
-      margin: auto;
+      margin: 0 50px;
+      padding-right: 20px;
     }
 
-    #section3 {
+    .slide {
+      border: 1px solid grey;
+      height: 230px;
+      background: white;
       position: relative;
+      margin-right: 50px;
+      display: inline-block;
+    }
 
-      padding: 170px;
+    .slide:hover {
+      background:linear-gradient(-45deg, #0036f9, #0098ce);
+      animation-name: fadeIn;
+      animation-duration: 1s;
+      transform: translateY(-10px);
+      transition: 0.4s;
+      box-shadow: 10px 10px 5px grey; 
+      border: none; 
+    }
+
+    .slide:hover p {
+      color: white;
+    }
+
+    .slide .pt {
+      position: relative;
+      top: 10px;
+      left: 30px;
+      font-size: 14pt;
+      font-weight: bolder;
+    }
+
+    .slide .pb {
+      position: relative;
+      color: rgb(173, 173, 173);
+      font-weight: bold;
+      font-size: 11pt;
+      top: 100px;
+      left: 30px;
+    }
+
+    .slide .pr {
+      position: relative;
+      font-weight: bold;
+      font-size: 33px;
+      float: right;
+      right: 30px;
+      top: 18px;
+    }
+
+    .slick-arrow {
+      position: relative;
+    }
+
+    .slick-prev {
+      top: 310px;
+      left: 1000px;
+      background-image: url(http://lawvax.co.kr/image/site/prev_btn.png);
+      width: 40px;
+      height: 40px;
+    }
+
+    .slick-next {
+      background-image: url(http://lawvax.co.kr/image/site/next_btn.png);
+      position: relative;
+      float: right;
+      right: 190px;
+      width: 40px;
+      height: 40px;
+      top: 38px;
     }
 
     #bottom_background {
@@ -309,19 +414,20 @@
 </head>
 
 <body>
+  
   <div id="wrap">
     <!-- header 시작-->
     <div id="header">
       <div class="top logo" id="logo">
-        <a href="Lawvax_Main.html">
+        <a href="0_Main.html">
           <img src="http://lawvax.co.kr/image/site/logo.png"></a>
       </div>
       <div class="tposition" id="menu_wrap">
-        <div class="tposition top"><a href="Lawvax_Main.html" id="hyper">LawVax</a></div>
-        <div class="tposition top"><a href="Lawvax_Main.html" id="hyper">주요 업무분야</a></div>
-        <div class="tposition top"><a href="Lawvax_Main.html" id="hyper">구성원</a></div>
-        <div class="tposition top"><a href="Lawvax_Main.html" id="hyper">소식·자료</a></div>
-        <div class="tposition top"><a href="Lawvax_Main.html" id="hyper">오시는길</a></div>
+        <div class="tposition top"><a href="1_Lawvax.html" id="hyper">LawVax</a></div>
+        <div class="tposition top"><a href="2_Task.html" id="hyper">주요 업무분야</a></div>
+        <div class="tposition top"><a href="3_Member.html" id="hyper">구성원</a></div>
+        <div class="tposition top"><a href="4_Board.html" id="hyper">소식·자료</a></div>
+        <div class="tposition top"><a href="5_Map.html" id="hyper">오시는길</a></div>
       </div>
 
       <select class="selectbox" style="font-size: 13px;">
@@ -348,25 +454,25 @@
     <!-- section2 시작 -->
     <div id="section2">
       <div class=title id="sec2_title">
-        <p id="p1" style="color: darkgrey; font-weight: bolder; font-size: 20px; margin:0px;">LawVax</p>
-        <p id="p2" style="font-weight: 900; font-size: 70px; margin-top: -20px;">WORKS</p>
+        <p style="color: darkgrey; font-weight: bolder; font-size: 20px; margin:0px;">LawVax</p>
+        <p style="font-weight: 900; font-size: 70px; margin-top: -20px;">WORKS</p>
       </div>
       <div class="sec2_position">
         <ul class="sec2_body" style="display:flex; text-shadow : 0px 1px 30px grey;">
           <li class="lifont" id="list1">
-            <a href="#" class="lia">
-              <p class="p1 pa">기업</p>
-              <p class="p2 pa">회계 관련 법률 리스크<br>경영권 승계나 M&A 관련 법률 리스크<br>
+            <a href="2_Task.html" class="lia">
+              <p class="p_1">기업</p>
+              <p class="p_2">회계 관련 법률 리스크<br>경영권 승계나 M&A 관련 법률 리스크<br>
                 공정거래 관련 법률 리스크<br>중대재해 관련 법률 리스크<br>
                 부동산/건설 관련 법률 리스크</p>
-              <p class="p3 pa">+</p>
+              <p class="p_3">+</p>
             </a>
           </li>
           <li class="lifont" id="list2">
-            <a href="#" class="lia">
-              <p class="p1 pa">금융</p>
-              <p class="p2 pa"><br><br><br>증권/금융 분야<br>가상자산(Virtual Asset)분야</p>
-              <p class="p3 pa">+</p>
+            <a href="2_Task.html" class="lia">
+              <p class="p_1">금융</p>
+              <p class="p_2"><br><br><br>증권/금융 분야<br>가상자산(Virtual Asset)분야</p>
+              <p class="p_3">+</p>
             </a>
           </li>
         </ul>
@@ -378,12 +484,54 @@
       <div class="title" id="sec3_title">
         <p id="sec3_p1" style="color: darkgrey; font-weight: bold; font-size: 20px; margin:0px;">LawVax</p>
         <p id="sec3_p2" style="font-weight: 900; font-size: 70px; margin-top: -20px;">NEWS & MEDIA</p>
-        <div class="box1 box2"><a href="#">
+        <div class="box1 box2"><a href="4_Board.html">
             <p id=boxc>모두 보기<p>
           </a></div>
       </div>
-      <div id="slick_slider">
-        slick slider ...●▅▇█▇▆▅▄▇...
+      <div class="slick_slider">
+        <div class="slide">
+          <a href="http://lawvax.co.kr/main/board/view.php?key=JTI1MjUzRE16TQ==">
+            <p class="pt">뉴스토마토-법무법인 로백스 <br> 법률자문협약</p>
+            <p class="pb">2022.08.16</p>
+            <p class="pr">+</p>
+          </a>
+        </div>
+        <div class="slide">
+          <a href="http://lawvax.co.kr/main/board/view.php?key=JTI1MjUzREl6TQ==">
+            <p class="pt">아시아경제 <br> [논단]재벌의 길을 가는 산은</p>
+            <p class="pb">2022.08.10</p>
+            <p class="pr">+</p>
+          </a>
+        </div>
+        <div class="slide">
+          <a href="http://lawvax.co.kr/main/board/view.php?key=JTI1MjUzREV6TQ==">
+            <p class="pt">뉴스핌 - [기고] 스타트업, <br>사법 리스크에 잘 대응하려면</p>
+            <p class="pb">2022-08-10</p>
+            <p class="pr">+</p>
+          </a>
+        </div>
+        <div class="slide">
+          <a href="http://lawvax.co.kr//main/board/view.php?key=JTI1MjUzREF6TQ==">
+            <p class="pt">‘거액 외환 송금’ <br>사건, 가상자산거래소도 책임 있을까</p>
+            <p class="pb">2022.08.02</p>
+            <p class="pr">+</p>
+          </a>
+        </div>
+        <div class="slide">
+          <a href="http://lawvax.co.kr/main/board/view.php?key=JTI1MjUzRGtqTQ==">
+            <p class="pt">글로벌 스탠더드 맞도록 수사구조 <br>정비해야</p>
+            <p class="pb">2022-07-25</p>
+            <p class="pr">+</p>
+          </a>
+        </div>
+        <div class="slide">
+          <a href="http://lawvax.co.kr/main/board/view.php?key=JTI1MjUzRGdqTQ==">
+            <p class="pt">[논단] 가상자산은 증권인가 아닌가 <br><br></p>
+            <p class="pb">2022-07-14</p>
+            <p class="pr">+</p>
+          </a>
+        </div>
+
       </div>
       <div id="bottom_background"></div>
     </div>
@@ -391,19 +539,19 @@
     <!-- section4 시작 -->
     <div id="section4">
       <div class="title" id="sec4_title" style="left: 60px;">
-        <p id="p1" style="color: darkgrey; font-weight: bolder; font-size: 20px; margin:0px;">LawVax</p>
-        <p id="p2" style="font-weight: 900; font-size: 70px;margin-top: -30px;">contact</p>
+        <p style="color: darkgrey; font-weight: bolder; font-size: 20px; margin:0px;">LawVax</p>
+        <p style="font-weight: 900; font-size: 70px;margin-top: -30px;">contact</p>
       </div>
       <div class="contact">
-        <div class="contact" id="contact1"><a id="cona1" href="#">LawVax 구성원 소개
+        <div class="contact" id="contact1"><a id="cona1" href="3_Member.html">LawVax 구성원 소개
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></div>
-        <div class="contact" id="contact2"><a id="cona2" href="#">LawVax 오시는길
+        <div class="contact" id="contact2"><a id="cona2" href="5_Map.html">LawVax 오시는길
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></div>
       </div>
     </div>
     <div id="footer">
       <div>
-        <a href=""><img src="http://lawvax.co.kr/image/site/logo.png" style="height: 50px; padding-bottom:10px ;">
+        <a href="0_Main.html"><img src="http://lawvax.co.kr/image/site/logo.png" style="height: 50px; padding-bottom:10px ;">
           <p style="font-weight:600; ">서울특별시 서초구 사임당로 18 석오빌딩 3층 법무법인 로백스|공동대표 김기동, 이동열</p><br>
           <p style="font-weight:600;">대표전화 : 02)583-6300 | 팩스 : 02)583-6303 | 이메일 : lawvax@lawvax.co.kr</p><br>
           <p style="color: grey;">Copyrightⓒ Lawvax. All rights reserved.</p>
