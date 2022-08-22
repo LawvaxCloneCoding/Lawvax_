@@ -25,6 +25,29 @@
   </script>
 
   <style>
+    @font-face{
+    font-family:'AppleSDGothicNeo';
+    src:url('/fonts/AppleSDGothicNeoUL.eot');
+    src:url('/fonts/AppleSDGothicNeoUL.woff') format('woff'),
+        url('/fonts/AppleSDGothicNeoUL.otf') format('opentype');
+    font-weight: 200;
+    font-style:normal;
+}
+
+html,body{
+    width:100%;height:100%;
+    /* font-family: 'Noto Sans KR', sans-serif; */
+    font-family: AppleSDGothicNeo, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    -moz-font-feature-settings:"liga", "kern";
+    letter-spacing:-0.04em;
+    font-weight:400;
+    color:#212326
+}
+
+
     @keyframes fadeInup {
       from {
         opacity: 0;
@@ -256,7 +279,7 @@
       width: 1300px;
       height: 230px;
       bottom: 55px;
-      z-index: 1;
+      z-index: 10;
       position: relative;
       margin: 0 50px;
       padding-right: 20px;
@@ -391,19 +414,20 @@
 </head>
 
 <body>
+  
   <div id="wrap">
     <!-- header 시작-->
     <div id="header">
       <div class="top logo" id="logo">
-        <a href="Lawvax_Main.html">
+        <a href="0_Main.html">
           <img src="http://lawvax.co.kr/image/site/logo.png"></a>
       </div>
       <div class="tposition" id="menu_wrap">
-        <div class="tposition top"><a href="Lawvax_Main.html" id="hyper">LawVax</a></div>
-        <div class="tposition top"><a href="Lawvax_Main.html" id="hyper">주요 업무분야</a></div>
-        <div class="tposition top"><a href="Lawvax_Main.html" id="hyper">구성원</a></div>
-        <div class="tposition top"><a href="Lawvax_Main.html" id="hyper">소식·자료</a></div>
-        <div class="tposition top"><a href="Lawvax_Main.html" id="hyper">오시는길</a></div>
+        <div class="tposition top"><a href="1_Lawvax.html" id="hyper">LawVax</a></div>
+        <div class="tposition top"><a href="2_Task.html" id="hyper">주요 업무분야</a></div>
+        <div class="tposition top"><a href="3_Member.html" id="hyper">구성원</a></div>
+        <div class="tposition top"><a href="4_Board.html" id="hyper">소식·자료</a></div>
+        <div class="tposition top"><a href="5_Map.html" id="hyper">오시는길</a></div>
       </div>
 
       <select class="selectbox" style="font-size: 13px;">
@@ -436,7 +460,7 @@
       <div class="sec2_position">
         <ul class="sec2_body" style="display:flex; text-shadow : 0px 1px 30px grey;">
           <li class="lifont" id="list1">
-            <a href="#" class="lia">
+            <a href="2_Task.html" class="lia">
               <p class="p_1">기업</p>
               <p class="p_2">회계 관련 법률 리스크<br>경영권 승계나 M&A 관련 법률 리스크<br>
                 공정거래 관련 법률 리스크<br>중대재해 관련 법률 리스크<br>
@@ -445,7 +469,7 @@
             </a>
           </li>
           <li class="lifont" id="list2">
-            <a href="#" class="lia">
+            <a href="2_Task.html" class="lia">
               <p class="p_1">금융</p>
               <p class="p_2"><br><br><br>증권/금융 분야<br>가상자산(Virtual Asset)분야</p>
               <p class="p_3">+</p>
@@ -460,7 +484,7 @@
       <div class="title" id="sec3_title">
         <p id="sec3_p1" style="color: darkgrey; font-weight: bold; font-size: 20px; margin:0px;">LawVax</p>
         <p id="sec3_p2" style="font-weight: 900; font-size: 70px; margin-top: -20px;">NEWS & MEDIA</p>
-        <div class="box1 box2"><a href="#">
+        <div class="box1 box2"><a href="4_Board.html">
             <p id=boxc>모두 보기<p>
           </a></div>
       </div>
@@ -519,15 +543,15 @@
         <p style="font-weight: 900; font-size: 70px;margin-top: -30px;">contact</p>
       </div>
       <div class="contact">
-        <div class="contact" id="contact1"><a id="cona1" href="#">LawVax 구성원 소개
+        <div class="contact" id="contact1"><a id="cona1" href="3_Member.html">LawVax 구성원 소개
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></div>
-        <div class="contact" id="contact2"><a id="cona2" href="#">LawVax 오시는길
+        <div class="contact" id="contact2"><a id="cona2" href="5_Map.html">LawVax 오시는길
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a></div>
       </div>
     </div>
     <div id="footer">
       <div>
-        <a href=""><img src="http://lawvax.co.kr/image/site/logo.png" style="height: 50px; padding-bottom:10px ;">
+        <a href="0_Main.html"><img src="http://lawvax.co.kr/image/site/logo.png" style="height: 50px; padding-bottom:10px ;">
           <p style="font-weight:600; ">서울특별시 서초구 사임당로 18 석오빌딩 3층 법무법인 로백스|공동대표 김기동, 이동열</p><br>
           <p style="font-weight:600;">대표전화 : 02)583-6300 | 팩스 : 02)583-6303 | 이메일 : lawvax@lawvax.co.kr</p><br>
           <p style="color: grey;">Copyrightⓒ Lawvax. All rights reserved.</p>
