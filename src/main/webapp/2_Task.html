@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>법무법인 로백스</title>
+<!-- test2 -->
+<script src="https://kit.fontawesome.com/debdd114de.js" crossorigin="anonymous"></script>
+
+
+<style>
+
+@keyframes fadeInup {
+	from {
+		opacity: 0;
+	transform: translate3d(0, 100%, 0);
+     }
+
+  	to {
+		opacity: 1;
+	transform: none;
+     }
+}
+
+@keyframes fadein {
+	from { 
+		opacity: 0;
+	}
+		
+	to { 
+		opacity: 1;
+	}
+}
+
+div.hd > a > img {
+	padding: 20px;
+	margin-right: 20px;
+}
+
+div.hd2 {
+	padding: 30px;
+	font-weight: bold;
+}
+
+li.hdl{
+	list-style-type: none;
+	float: left;
+	padding-left: 3%;
+	padding-right: 3%;
+}
+
+li.hdl > a {
+	text-decoration: none;
+	font-size: 20px;
+	color: black;
+}
+
+li.hdl > a:hover {
+	color: blue;
+}
+
+#lang {
+	float: right;
+	padding: 5px;
+	width: 70px;
+}
+
+/* ---------------------------------------------------- */
+
+div.md {
+	display: inline-block;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-right: 5%;
+    padding-left: 5%;
+    
+    
+}
+
+h1, h2 {
+	padding-left: 45px;
+	font-size: 25px;
+	animation-name: fadeInup;
+	animation-duration: 2.5s;
+}
+
+h1 {
+	font-size: 40px;
+	margin-bottom: 0;
+}
+
+div.homelogo {
+	color: blue;
+	margin-left: 45px;
+	float: left;
+}
+
+p.p1 {
+	display: inline-block;
+	margin-top: 0;
+	margin-bottom: 60px;
+	color: #b2b4b0;
+	font-weight: bold;
+}
+
+div.ml2 {
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+li.mdl {
+	display: inline-block;
+	border: 1px solid black;
+	width: 47%;
+	margin: 6px;
+	font-size: 17px;
+}
+
+li.mdl:hover {
+	background: linear-gradient(90deg, #17c2f6, blue);
+}
+
+a.mda {
+	text-decoration: none;
+	color: black;
+	display: block; 
+	padding: 4%;
+}
+
+a.mda:hover {
+	color: white;
+}
+
+div.chevronlogo {
+	float: right;
+}
+
+#mdl1 {
+	animation-name: fadein;
+	animation-duration:	0.5s;
+}
+
+#mdl2 {
+	animation-name: fadein;
+	animation-duration:	2s;
+}
+
+#mdl3 {
+	animation-name: fadein;
+	animation-duration:	3.5s;
+}
+
+#mdl4 {
+	animation-name: fadein;
+	animation-duration:	5s;
+}
+
+#mdl5 {
+	animation-name: fadein;
+	animation-duration:	6.5s;
+}
+
+/* ---------------------------------------------------- */
+
+div.ft {
+	padding-top: 45px;
+	padding-bottom: 45px;
+	padding-right: 10%;
+    padding-left: 10%;
+    border-top: 1px solid #E6E6E6;
+}
+
+#fta {
+	padding-left: 0;
+}
+
+p.p2, p.p3 {
+	font-size: 11px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+p.p3 {
+	color: #979894;
+	margin-top: 5px;
+}
+
+/* ---------------------------------------------------- */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 900;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  position: fixed;
+  width: 60%;
+  padding: 10px;
+  max-width: 500px;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, .9);
+  /* "delay" the visibility transition */
+  -webkit-transition: opacity .5s, visibility 0s linear .5s;
+  transition: opacity .5s, visibility 0s linear .5s;
+  z-index: 1;
+}
+
+.popup:target {
+  visibility: visible;
+  opacity: 1;
+  /* cancel visibility transition delay */
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.popup .close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  padding: 5px;
+  color: #000;
+  transition: color .3s;
+  font-size: 2em;
+  line-height: .6em;
+  font-weight: bold;
+}
+
+.popup .close:hover {
+  color: #00E5EE;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="hd">
+	<a href="http://lawvax.co.kr/main/index.php">
+		<img src="http://lawvax.co.kr/image/site/logo.png" style="float:left;">	
+	</a>
+	
+	<div class="hd2">
+		<ul>
+			<li class="hdl">
+				<a href="#">LawVax</a>
+			</li>
+	
+			<li class="hdl">
+				<a href="#">주요 업무분야</a>
+			</li>
+			
+			<li class="hdl">
+				<a href="#">구성원</a>
+			</li>
+		
+			<li class="hdl">
+				<a href="#">소식·자료</a>
+			</li>
+			<li class="hdl">
+				<a href="#">오시는 길</a>
+			</li>
+		</ul>
+		
+		<select id="lang">
+			<option value="">KOR</option>
+		    <option value="">ENG</option>
+		</select>
+	</div>
+</div>
+
+<div class="md">
+
+	<div style="float:left;">
+		<h1>주요 업무분야</h1>
+		<div class="homelogo">
+			<i class="fas fa-home"></i>
+		</div>
+		<p class="p1"> > 주요 업무분야</p>
+	</div>
+	
+	<div>
+		<img src="http://lawvax.co.kr/image/site/logo2.png" style="float:right; width: 7%; height: 7%; 
+		min-width:55px; min-height:55px; margin:21.44px;">
+	</div>
+	
+	<div style="clear:both;"></div>
+
+	<div class="ml1">
+		<h2>기업 분야</h2>
+		<ul>
+			
+			<li class="mdl" id="mdl1">
+				<a class="mda" href="#pop1">
+					회계 관련 법률 리스크 
+					<div class="chevronlogo"><i class="fas fa-chevron-right"></i></div>
+				</a>
+			</li>
+			
+			<li class="mdl" id="mdl2" >
+				<a class="mda" href='popup.php' onclick="window.open(this.href,'팝업창','width=800, height=800'); return false;">
+					중대재해 관련 법률 리스크
+					<div class="chevronlogo"><i class="fas fa-chevron-right"></i></div>
+				</a>
+			</li>
+			
+			<li class="mdl" id="mdl3" >
+				<a class="mda" href='popup.php' onclick="window.open(this.href,'팝업창','width=800, height=800'); return false;">
+					경영권 승계나 M&A 관련 법률 리스크
+					<div class="chevronlogo"><i class="fas fa-chevron-right"></i></div>
+				</a>
+			</li>
+			
+			<li class="mdl" id="mdl4" >
+				<a class="mda" href='popup.php' onclick="window.open(this.href,'팝업창','width=800, height=800'); return false;">
+					부동산 / 건설 관련 법률 리스크
+					<div class="chevronlogo"><i class="fas fa-chevron-right"></i></div>
+				</a>
+			</li>
+			
+			<li class="mdl" id="mdl5" >
+				<a class="mda" href='popup.php' onclick="window.open(this.href,'팝업창','width=800, height=800'); return false;">
+					공정거래 관련 법률 리스크
+					<div class="chevronlogo"><i class="fas fa-chevron-right"></i></div>
+				</a>
+			</li>
+			
+		</ul>
+	</div>
+	
+	<div class="ml2">
+	
+		<h2>금융 분야</h2>
+		<ul>
+			<li class="mdl" id="mdl1" >
+				<a class="mda"  href='popup.php' onclick="window.open(this.href,'팝업창','width=800, height=800'); return false;">
+					증권 / 금융 분야
+					<div class="chevronlogo"><i class="fas fa-chevron-right"></i></div>
+				</a>
+			</li>
+			
+			<li class="mdl" id="mdl2" >
+				<a class="mda"  href='popup.php' onclick="window.open(this.href,'팝업창','width=800, height=800'); return false;">
+					가상자산(Virtual asset)
+					<div class="chevronlogo"><i class="fas fa-chevron-right"></i></div>
+				</a>
+			</li>
+			
+		</ul>
+	</div>
+
+</div>
+
+<div class="ft">
+	<a href="http://lawvax.co.kr/main/index.php">
+		<img src="http://lawvax.co.kr/image/site/logo.png" style="height: 48px;">	
+	</a>
+	
+	<p class="p2">
+		서울특별시 서초구 사임당로 18 석오빌딩 3층 법무법인 로백스 | 공동대표 김기동, 이동열
+		<br>
+		대표전화 : 02)583-6300 | 팩스 : 02)583-6303 | 이메일 : lawvax@lawvax.co.kr
+	</p>
+	
+	<p class="p3">
+		Copyright© LawVax. All rights reserved.
+	</p>
+	
+</div>
+
+<div id="pop1" class="overlay">
+  <div class="popup">
+    <a href="#none" class="close">&times;</a>
+    열려라 팝업!
+  </div>
+</div>
+
+</body>
+</html>
